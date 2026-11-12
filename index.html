@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A tiny, cozy, cat-powered question for someone very special."
+    />
+    <title>For my favorite person</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--
+      THESIS: A playful love note that turns one question into a tiny interactive story,
+      refusing the standard static proposal landing page.
+      OWN-WORLD: Blush paper, warm film grain, black hoodie details, cream ink doodles,
+      rounded photo frames, and soft rose light.  
+      STORY: A visitor meets two cat companions, tries to say no, and arrives at a
+      symbol-built heart that makes the yes feel like a reveal.
+      FIRST VIEWPORT: One large question, one framed cat portrait, and two tactile
+      actions occupy the center; the stationary YES is always the clear way forward.
+      FORM: Four stateful scenes in one lightweight page, staged as a hand-made card
+      sequence with a rotating particle heart as its final signature moment.
+    -->
+    <main class="site-shell">
+      <div class="ambient ambient-one" aria-hidden="true"></div>
+      <div class="ambient ambient-two" aria-hidden="true"></div>
+      <div class="sparkle-field" aria-hidden="true">
+        <span>✦</span><span>♡</span><span>✧</span><span>★</span><span>♥</span><span>✦</span>
+      </div>
+
+      <section class="scene scene-proposal is-active" data-scene="proposal" aria-labelledby="proposal-title">
+        <div class="scene-copy">
+          <p class="tiny-note">a very serious question, actually</p>
+          <h1 id="proposal-title">Will you be my girlfriend?</h1>
+          <p class="scene-subtitle">There is a tiny cat committee waiting for your answer.</p>
+        </div>
+        <div class="portrait-wrap portrait-wrap-pink">
+          <span class="doodle doodle-crown" aria-hidden="true">♕</span>
+          <span class="doodle doodle-heart" aria-hidden="true">♡</span>
+          <img
+            src="assets/cat-pink.png"
+            alt="A cat wearing a soft pink character hoodie"
+            onerror="this.classList.add('image-missing')"
+          />
+        </div>
+        <div class="actions" aria-label="Proposal answer">
+          <button class="button button-yes" type="button" data-go="ending">YES <span>♥</span></button>
+          <button class="button button-no evasive-gentle" type="button" data-go="second">NO <span>↗</span></button>
+        </div>
+        <p class="micro-copy">choose wisely, the cat is watching</p>
+      </section>
+
+      <section class="scene scene-second" data-scene="second" aria-labelledby="second-title" hidden>
+        <div class="scene-copy">
+          <p class="tiny-note">the committee requests a recount</p>
+          <h2 id="second-title">please, do you really want to reject such a cute and handsome boy</h2>
+          <p class="scene-subtitle">Look into those eyes and try saying no again.</p>
+        </div>
+        <div class="portrait-wrap portrait-wrap-dark">
+          <span class="doodle doodle-star" aria-hidden="true">✦</span>
+          <span class="doodle doodle-spark" aria-hidden="true">✧</span>
+          <img
+            src="assets/cat-hoodie.png"
+            alt="A cat in a black hoodie with hand-drawn white doodles"
+            onerror="this.classList.add('image-missing')"
+          />
+        </div>
+        <div class="actions" aria-label="Second question answer">
+          <button class="button button-yes evasive-bold" type="button" data-go="third">YES <span>♥</span></button>
+          <button class="button button-no" type="button" data-go="proposal">NO <span>↩</span></button>
+        </div>
+        <p class="micro-copy">no pressure. except maybe a little.</p>
+      </section>
+
+      <section class="scene scene-third" data-scene="third" aria-labelledby="third-title" hidden>
+        <div class="scene-copy">
+          <p class="tiny-note">final, final check</p>
+          <h2 id="third-title">Are u really sure <span class="crying-emoji" aria-label="crying face">🥺</span></h2>
+          <p class="scene-subtitle">This is your last chance to be dramatic about it.</p>
+        </div>
+        <div class="portrait-wrap portrait-wrap-pink portrait-wrap-small">
+          <span class="doodle doodle-tear" aria-hidden="true">⋰</span>
+          <span class="doodle doodle-heart doodle-heart-left" aria-hidden="true">♡</span>
+          <img
+            src="assets/cat-pink.png"
+            alt="A cat in a pink hoodie looking up at the camera"
+            onerror="this.classList.add('image-missing')"
+          />
+        </div>
+        <div class="actions" aria-label="Final question answer">
+          <button class="button button-yes evasive-extreme" type="button" data-go="none">YES <span>♥</span></button>
+          <button class="button button-no" type="button" data-go="second">NO <span>↩</span></button>
+        </div>
+        <p class="micro-copy">the YES button has stage fright</p>
+      </section>
+
+      <section class="scene scene-ending" data-scene="ending" aria-labelledby="ending-title" hidden>
+        <div class="ending-layout">
+          <div class="ending-copy">
+            <p class="tiny-note">officially the best answer</p>
+            <h2 id="ending-title">ohh my lady, i promise to serve you till death</h2>
+            <p class="scene-subtitle">A small promise, surrounded by an unreasonable amount of love.</p>
+            <div class="ending-photos" aria-label="Our tiny cat witnesses">
+              <img src="assets/cat-pink.png" alt="Pink hoodie cat witness" onerror="this.classList.add('image-missing')" />
+              <img src="assets/cat-hoodie.png" alt="Black hoodie cat witness" onerror="this.classList.add('image-missing')" />
+            </div>
+          </div>
+          <div class="heart-stage" aria-label="An animated 3D heart made of romantic symbols">
+            <div class="heart-glow" aria-hidden="true"></div>
+            <div class="symbol-heart" id="symbol-heart"></div>
+            <div class="heart-caption" aria-hidden="true">always&nbsp; yours</div>
+          </div>
+        </div>
+        <p class="ending-footer">made with cat hair, courage, and a lot of love <span>♡</span></p>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
